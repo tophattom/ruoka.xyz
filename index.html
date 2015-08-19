@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>TTY:n ruokalistat</title>
+        
+        <link rel="stylesheet" href="css/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js" charset="utf-8"></script>
+        
+        <script id="main-template" type="text/x-handlebars-template">
+            {{#each this.menus}}
+                <div class="menu">
+                    <h2>{{this.restaurant}} <span class="menu-name">– {{this.name}}</span></h2>
+                    
+                    <ul class="meal-list">
+                        {{#each this.meals}}
+                            <li>
+                                <div class="meal">
+                                    <h3 class="meal-name">{{this.name}}</h3>
+                                    <ul class="meal-contents">
+                                        {{#each this.contents}}
+                                            <li>{{this}}</li>
+                                        {{/each}}
+                                    </ul>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        </script>
+    </head>
+    
+    <body>
+        <h1>TTY:n ruokalistat</h1>
+        
+        <div id="main-content" class="menus">
+            
+        </div>
+        
+        <script src="js/main.js" charset="utf-8"></script>
+    </body>
+</html>

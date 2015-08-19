@@ -1,0 +1,29 @@
+body {
+    padding: 20px;
+    
+    font-family: 'Open Sans', 'Helvetica', sans-serif;
+    
+    background: #222;
+    color: #fefefe;
+}
+
+h1 {
+    font-weight: 300;
+}
+
+.menu {
+    margin-bottom: 60px;
+}
+
+.menu-name {
+    font-weight: 300;
+}
+
+.meal-name {
+    text-transform: uppercase;
+    color: #bbb;
+}
+
+ul {
+    list-style-type: none;
+}
