@@ -8,31 +8,34 @@
         <title>TTY:n ruokalistat</title>
         
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/large.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         
         <script id="main-template" type="text/x-handlebars-template">
             <h2 class="current-date">{{this.date}}</h2>
             
-            {{#each this.menus}}
-                <div class="menu">
-                    <h2>{{this.restaurant}} <span class="menu-name">– {{this.name}}</span></h2>
-                    
-                    <ul class="meal-list">
-                        {{#each this.meals}}
-                            <li>
-                                <div class="meal">
-                                    <h3 class="meal-name">{{this.name}}</h3>
-                                    <ul class="meal-contents">
-                                        {{#each this.contents}}
-                                            <li>{{this}}</li>
-                                        {{/each}}
-                                    </ul>
-                                </div>
-                            </li>
-                        {{/each}}
-                    </ul>
-                </div>
-            {{/each}}
+            <div class="menus">
+                {{#each this.menus}}
+                    <div class="menu">
+                        <h2>{{this.restaurant}} <span class="menu-name">– {{this.name}}</span></h2>
+                        
+                        <ul class="meal-list">
+                            {{#each this.meals}}
+                                <li>
+                                    <div class="meal">
+                                        <h3 class="meal-name">{{this.name}}</h3>
+                                        <ul class="meal-contents">
+                                            {{#each this.contents}}
+                                                <li>{{this}}</li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                {{/each}}
+            </div>
         </script>
     </head>
     
@@ -44,7 +47,7 @@
             <button id="next-day" class="nav-button">Seuraava päivä</button>
         </div>
         
-        <div id="main-content" class="menus">
+        <div id="main-content">
             
         </div>
         

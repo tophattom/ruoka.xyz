@@ -1,0 +1,10 @@
+@media (min-width: 850px) {
+    .menus {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .menu {
+        flex-basis: 50%;
+    }
+}
