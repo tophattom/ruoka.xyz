@@ -10,9 +10,9 @@
         <link rel="stylesheet" href="css/main.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js" charset="utf-8"></script>
-        
         <script id="main-template" type="text/x-handlebars-template">
+            <h2>{{this.date}}</h2>
+            
             {{#each this.menus}}
                 <div class="menu">
                     <h2>{{this.restaurant}} <span class="menu-name">– {{this.name}}</span></h2>
@@ -39,10 +39,15 @@
     <body>
         <h1>TTY:n ruokalistat</h1>
         
+        <button id="prev-day" class="nav-button">Edellinen päivä</button>
+        <button id="next-day" class="nav-button">Seuraava päivä</button>
+        
         <div id="main-content" class="menus">
             
         </div>
         
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js" charset="utf-8"></script>
+        <script src="lib/moment.min.js" charset="utf-8"></script>
         <script src="js/main.js" charset="utf-8"></script>
     </body>
 </html>

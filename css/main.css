@@ -27,3 +27,21 @@ h1 {
 ul {
     list-style-type: none;
 }
+
+.nav-button {
+    padding: 10px 15px;
+    border: 1px solid #fefefe;
+    border-radius: 3px;
+    
+    font-size: 11pt;
+    
+    background: transparent;
+    color: #fefefe;
+    
+    transition: background ease-in-out 0.1s;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
