@@ -1,6 +1,10 @@
 (function() {
     'use strict';
     
+    moment.locale('fi');
+    
+    var weekdays = ['maanantai', 'tiistai', 'keskiviikko', 'torstai', 'perjantai', 'lauantai', 'sunnuntai'];
+    
     var selectedDate = moment(new Date());
         
     var contentElem = document.getElementById('main-content'),
@@ -37,7 +41,7 @@
         
         req.addEventListener('load', function() {
             var context = JSON.parse(this.responseText);
-            context.date = date.format('D.M.');
+            context.date = weekdays[date.weekday()] + ' ' + date.format('D.M.');
             
             contentElem.innerHTML = template(context);
         });

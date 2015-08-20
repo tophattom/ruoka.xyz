@@ -11,6 +11,10 @@ h1 {
     font-weight: 300;
 }
 
+.top-container, .current-date {
+    text-align: center;
+}
+
 .menu {
     margin-bottom: 60px;
 }
@@ -29,6 +33,7 @@ ul {
 }
 
 .nav-button {
+    margin: 5px;
     padding: 10px 15px;
     border: 1px solid #fefefe;
     border-radius: 3px;
