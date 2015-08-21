@@ -29,6 +29,13 @@ h1 {
     color: #bbb;
 }
 
+.meal-diets {
+    margin-left: 15px;
+    
+    font-size: 75%;
+    color: #888;
+}
+
 ul {
     list-style-type: none;
 }

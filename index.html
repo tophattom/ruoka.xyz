@@ -26,7 +26,9 @@
                                         <h3 class="meal-name">{{this.name}}</h3>
                                         <ul class="meal-contents">
                                             {{#each this.contents}}
-                                                <li>{{this}}</li>
+                                                <li>
+                                                    {{this.name}} <span class="meal-diets">{{this.diets}}</span>
+                                                </li>
                                             {{/each}}
                                         </ul>
                                     </div>
