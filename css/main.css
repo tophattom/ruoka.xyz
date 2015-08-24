@@ -21,6 +21,7 @@ h1 {
 }
 
 .menu-name {
+    display: inline-block;
     font-weight: 300;
 }
 
@@ -30,6 +31,8 @@ h1 {
 }
 
 .meal-diets {
+    display: inline-block;
+    
     margin-left: 15px;
     
     font-size: 75%;
