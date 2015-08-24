@@ -14,33 +14,35 @@
         
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
         
-        <script id="main-template" type="text/x-handlebars-template">
-            <h2 class="current-date">{{this.date}}</h2>
+        <script type="text/plain" id="main-template">
+            <h2 class="current-date">{{=it.date}}</h2>
             
             <div class="menus">
-                {{#each this.menus}}
+                {{~it.menus :menu}}
                     <div class="menu">
-                        <h2>{{this.restaurant}} <span class="menu-name">– {{this.name}}</span></h2>
+                        <h2>{{=menu.restaurant}} <span class="menu-name">– {{=menu.name}}</span></h2>
                         
                         <ul class="meal-list">
-                            {{#each this.meals}}
+                            {{~menu.meals :meal}}
                                 <li>
                                     <div class="meal">
-                                        <h3 class="meal-name">{{this.name}}</h3>
+                                        <h3 class="meal-name">{{=meal.name}}</h3>
+                                        
                                         <ul class="meal-contents">
-                                            {{#each this.contents}}
+                                            {{~meal.contents :content}}
                                                 <li>
-                                                    {{this.name}} <span class="meal-diets">{{this.diets}}</span>
+                                                    {{=content.name}} <span class="meal-diets">{{=(content.diets ? content.diets.join(', ') : '')}}</span>
                                                 </li>
-                                            {{/each}}
+                                            {{~}}
                                         </ul>
                                     </div>
                                 </li>
-                            {{/each}}
+                            {{~}}
                         </ul>
                     </div>
-                {{/each}}
+                {{~}}
             </div>
+            
         </script>
     </head>
     
@@ -55,10 +57,9 @@
         <div id="main-content">
             
         </div>
-        
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js" charset="utf-8"></script>
-        
+                
         <!-- build:js js/build.js -->
+        <script src="lib/dot.min.js"></script>
         <script src="lib/moment.min.js" charset="utf-8"></script>
         <script src="lib/moment.fi.js" charset="utf-8"></script>
         <script src="js/main.js" charset="utf-8"></script>

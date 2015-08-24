@@ -10,7 +10,7 @@
     var contentElem = document.getElementById('main-content'),
     
         source = document.getElementById('main-template').innerHTML,
-        template = Handlebars.compile(source),
+        template = doT.template(source),
         
         apiUrl = 'http://api.ruoka.xyz/';
         
