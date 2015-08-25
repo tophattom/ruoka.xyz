@@ -18,7 +18,7 @@
             <h2 class="current-date">{{=it.date}}</h2>
             
             <div class="menus">
-                {{~it.menus :menu}}
+                {{~it.menus.reverse() :menu}}
                     <div class="menu">
                         <h2>{{=menu.restaurant}} <span class="menu-name">– {{=menu.name}}</span></h2>
                         
