@@ -18,28 +18,30 @@
             <h2 class="current-date">{{=it.date}}</h2>
             
             <div class="menus">
-                {{~it.menus.reverse() :menu}}
-                    <div class="menu">
-                        <h2>{{=menu.restaurant}} <span class="menu-name">– {{=menu.name}}</span></h2>
-                        
-                        <ul class="meal-list">
-                            {{~menu.meals :meal}}
-                                <li>
-                                    <div class="meal">
-                                        <h3 class="meal-name">{{=meal.name}}</h3>
-                                        
-                                        <ul class="meal-contents">
-                                            {{~meal.contents :content}}
-                                                <li>
-                                                    {{=content.name}} <span class="meal-diets">{{=(content.diets ? content.diets.join(', ') : '')}}</span>
-                                                </li>
-                                            {{~}}
-                                        </ul>
-                                    </div>
-                                </li>
-                            {{~}}
-                        </ul>
-                    </div>
+                {{~it.restaurants.reverse() :restaurant}}
+                    {{~restaurant.menus :menu}}
+                        <div class="menu">
+                            <h2>{{=restaurant.name}} <span class="menu-name">– {{=menu.name}}</span></h2>
+                            
+                            <ul class="meal-list">
+                                {{~menu.meals :meal}}
+                                    <li>
+                                        <div class="meal">
+                                            <h3 class="meal-name">{{=meal.name}}</h3>
+                                            
+                                            <ul class="meal-contents">
+                                                {{~meal.contents :content}}
+                                                    <li>
+                                                        {{=content.name}} <span class="meal-diets">{{=(content.diets ? content.diets.join(', ') : '')}}</span>
+                                                    </li>
+                                                {{~}}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                {{~}}
+                            </ul>
+                        </div>
+                    {{~}}
                 {{~}}
             </div>
             
