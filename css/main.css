@@ -26,8 +26,18 @@ h1 {
 }
 
 .meal-name {
+    font-size: 13pt;
+    
     text-transform: uppercase;
     color: #bbb;
+}
+
+.meal-prices {
+    margin-left: 15px;
+    font-size: 70%;
+    font-weight: normal;
+    
+    color: #888;
 }
 
 .meal-diets {

@@ -27,7 +27,9 @@
                                 {{~menu.meals :meal}}
                                     <li>
                                         <div class="meal">
-                                            <h3 class="meal-name">{{=meal.name}}</h3>
+                                            <h3 class="meal-name">
+                                                {{=meal.name}} <span class="meal-prices">{{=(meal.prices ? meal.prices.join(' / ') + '€' : '')}}</span>
+                                            </h3>
                                             
                                             <ul class="meal-contents">
                                                 {{~meal.contents :content}}
