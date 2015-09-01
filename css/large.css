@@ -4,7 +4,7 @@
         flex-wrap: wrap;
     }
     
-    .menu {
+    .menu-group {
         flex-basis: 50%;
     }
 }

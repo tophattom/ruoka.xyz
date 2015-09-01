@@ -19,6 +19,7 @@
             
             <div class="menus">
                 {{~it.restaurants.reverse() :restaurant}}
+                    <div class="menu-group">
                     {{~restaurant.menus :menu}}
                         <div class="menu">
                             <h2>{{=restaurant.name}} <span class="menu-name">– {{=menu.name}}</span></h2>
@@ -44,6 +45,7 @@
                             </ul>
                         </div>
                     {{~}}
+                    </div>
                 {{~}}
             </div>
             
