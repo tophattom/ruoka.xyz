@@ -27,12 +27,15 @@ h1 {
 
 .meal-name {
     font-size: 13pt;
+    font-weight: normal;
     
     text-transform: uppercase;
     color: #bbb;
 }
 
 .meal-prices {
+    display: inline-block;
+    
     margin-left: 15px;
     font-size: 70%;
     font-weight: normal;
@@ -51,6 +54,7 @@ h1 {
 
 ul {
     list-style-type: none;
+    padding-left: 25px;
 }
 
 .nav-button {
