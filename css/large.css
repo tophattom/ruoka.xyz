@@ -5,6 +5,7 @@
     }
     
     .menu-group {
-        flex-basis: 50%;
+        flex-grow: 1;
+        margin: 20px;
     }
 }
