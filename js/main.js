@@ -11,6 +11,7 @@
     
         source = document.getElementById('main-template').innerHTML,
         template = doT.template(source),
+        loadingIcon = '<div class="loading-icon"><i class="fa fa-circle-o-notch fa-spin"></i></div>',
         
         apiUrl = 'http://api.ruoka.xyz/';
         
@@ -34,6 +35,8 @@
         
     
     function updateMenus(date) {
+        contentElem.innerHTML = loadingIcon;
+        
         var dateString = date.format('YYYY-MM-DD'),
             requestUrl = apiUrl + dateString;
             
