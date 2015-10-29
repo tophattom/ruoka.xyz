@@ -7,6 +7,9 @@ var gulp = require('gulp'),
     revDel = require('rev-del');
     
 gulp.task('build', function() {
+    gulp.src('img/*')
+        .pipe(gulp.dest('build/img/'));
+        
     gulp.src('index.html')
         .pipe(usemin({
             css: [autoprefixer(), minifyCss(), 'concat', rev()],
