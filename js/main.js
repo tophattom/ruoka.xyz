@@ -13,7 +13,7 @@
         template = doT.template(source),
         loadingIcon = '<div class="loading-icon"><i class="fa fa-circle-o-notch fa-spin"></i></div>',
         
-        apiUrl = 'http://api.ruoka.xyz/';
+        apiUrl = 'https://api.ruoka.xyz/';
         
     updateMenus(selectedDate);
     
