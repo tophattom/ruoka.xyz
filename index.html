@@ -28,7 +28,15 @@
                     <div class="menu-group">
                     {{~restaurant.menus :menu}}
                         <div class="menu">
-                            <h2>{{=restaurant.name}} <span class="menu-name">– {{=menu.name}}</span></h2>
+                            <h2>
+                                {{? restaurant.url}}<a class="restaurant-link" href="{{=restaurant.url}}">{{?}}
+                                
+                                {{=restaurant.name}} <span class="menu-name">– {{=menu.name}}</span>
+                                
+                                {{? restaurant.url}}
+                                <span class="link-icon"><i class="fa fa-external-link"></i></span></a>
+                                {{?}}
+                            </h2>
                             
                             <ul class="meal-list">
                                 {{~menu.meals :meal}}

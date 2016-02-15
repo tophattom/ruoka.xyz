@@ -16,6 +16,17 @@ h1 {
     text-align: center;
 }
 
+.restaurant-link {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+.link-icon {
+    margin-left: 5px;
+    font-size: 65%;
+    color: #888;
+}
+
 .menu {
     margin-bottom: 80px;
 }
